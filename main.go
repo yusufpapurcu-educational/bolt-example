@@ -1,17 +1,11 @@
+/*
+Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+
+*/
 package main
 
-import (
-	"log"
-
-	"github.com/boltdb/bolt"
-)
+import "github.com/yusufpapurcu/bolt-example/cmd"
 
 func main() {
-	// Open the my.db data file in your current directory.
-	// It will be created if it doesn't exist.
-	db, err := bolt.Open("my.db", 0600, nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer db.Close()
+	cmd.Execute()
 }
